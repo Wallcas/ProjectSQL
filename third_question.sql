@@ -3,7 +3,7 @@ SELECT DISTINCT
 	f.YEAR,
 	f2.year + 1 as year_prev,
 	round( ( f.avg_value_food - f2.avg_value_food ) / f2.avg_value_food * 100, 2 ) as avg_value_food_growth
-	FROM t_voloshyn_kostiantyn_primary_final AS f
+FROM t_voloshyn_kostiantyn_primary_final AS f
 JOIN t_voloshyn_kostiantyn_primary_final AS f2
     ON f.food_category = f2.food_category
     AND f.year = f2.year + 1
