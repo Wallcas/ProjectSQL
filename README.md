@@ -7,6 +7,26 @@
 ### _4. Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?_
 ### 5. _Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo násdujícím roce výraznějším růstem?_
 
+## Finální tabulky
+   Vytvořil jsem **primární tabulku t_voloshyn_kostiantyn_primary_final**. Která zpracovává data mezd a cen potravin za 
+Českou republiku sjednocených na totožné porovnatelné období -společné roky. 
+Tato tabulka obsahuje sloupce:
+  + **category_code**
+  + **food_category**
+  + **year**
+  + **avg_value_food**
+  + **food_price**
+  + **code**
+  + **industry_name**
+  + **payroll_value**
+
+ Dále jsem vytvořil **sekundární tabulku t_voloshyn_kostiantyn_project_SQL_secondary_table**.
+ Tato tabulka obsahuje sloupce:
+   + **country**
+   + **year**
+   + **GDP**
+   + **gini**
+   + **population**
 
 ## **Odpoved:** 
 ### _1. Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?_
