@@ -13,12 +13,12 @@ ORDER BY avg_value_food_growth ASC;
 
 SELECT
     food_category,
-    AVG(CASE WHEN year = 2008 THEN avg_value_food END) AS food_price_2008,
-    AVG(CASE WHEN year = 2018 THEN avg_value_food END) AS food_price_2018,
-    ROUND(((AVG(CASE WHEN year = 2018 THEN avg_value_food END) - AVG(CASE WHEN year = 2008 THEN avg_value_food END)) / AVG(CASE WHEN year = 2008 THEN avg_value_food END)) * 100, 2) AS percentage_change,
+    avg(CASE WHEN year = 2008 THEN avg_value_food END) AS food_price_2008,
+    avg(CASE WHEN year = 2018 THEN avg_value_food END) AS food_price_2018,
+    ROUND(((avg(CASE WHEN year = 2018 THEN avg_value_food END) - avg(CASE WHEN year = 2008 THEN avg_value_food END)) / avg(CASE WHEN year = 2008 THEN avg_value_food END)) * 100, 2) AS percentage_change,
     CASE
-        WHEN AVG(avg_value_food) > AVG(CASE WHEN year = 2008 THEN avg_value_food END) THEN 'Growth'
-        WHEN AVG(avg_value_food) < AVG(CASE WHEN year = 2008 THEN avg_value_food END) THEN 'Fall'
+        WHEN avg(avg_value_food) > avg(CASE WHEN year = 2008 THEN avg_value_food END) THEN 'Growth'
+        WHEN avg(avg_value_food) < avg(CASE WHEN year = 2008 THEN avg_value_food END) THEN 'Fall'
         ELSE 'Same'
     END AS trend
 FROM
